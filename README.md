@@ -1,1 +1,1 @@
-# DN4.0_akhi
+Hi, I'm Akhila, and this repository was created to post and maintain the weekly exercises given in the Deepskilling Manual by Cognizant. Each folder contains Java code implementations and output screenshots as part of my learning journey. The exercises are organized week-wise for clarity and easy tracking.
