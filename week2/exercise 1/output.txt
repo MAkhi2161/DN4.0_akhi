@@ -1,0 +1,57 @@
+Expected Output for control_structures.sql
+
+--------------------------------------------
+Scenario 1: Interest Discount for Age > 60
+--------------------------------------------
+Action: Reduce loan_interest_rate by 1% for customers aged over 60.
+
+Sample Table Before:
+| customer_id | name   | age | loan_interest_rate |
+|-------------|--------|-----|--------------------|
+| 101         | Akhila | 22  | 8.5                |
+| 102         | Ravi   | 65  | 9.0                |
+| 103         | Sita   | 70  | 10.5               |
+
+Sample Table After:
+| customer_id | name   | age | loan_interest_rate |
+|-------------|--------|-----|--------------------|
+| 101         | Akhila | 22  | 8.5                |
+| 102         | Ravi   | 65  | 8.0                |
+| 103         | Sita   | 70  | 9.5                |
+
+(No visible output — data updated in table)
+
+--------------------------------------------
+Scenario 2: Promote to VIP if Balance > 10,000
+--------------------------------------------
+Action: Set IsVIP = 'TRUE' for customers with balance > 10000.
+
+Sample Table Before:
+| customer_id | name   | balance | IsVIP  |
+|-------------|--------|---------|--------|
+| 101         | Akhila | 9000    | FALSE  |
+| 102         | Ravi   | 15000   | FALSE  |
+| 103         | Sita   | 25000   | FALSE  |
+
+Sample Table After:
+| customer_id | name   | balance | IsVIP  |
+|-------------|--------|---------|--------|
+| 101         | Akhila | 9000    | FALSE  |
+| 102         | Ravi   | 15000   | TRUE   |
+| 103         | Sita   | 25000   | TRUE   |
+
+(No visible output — data updated in table)
+
+--------------------------------------------
+Scenario 3: Loan Due Reminders in Next 30 Days
+--------------------------------------------
+Action: Print reminders for customers whose loans are due within the next 30 days.
+
+Sample Output (via DBMS_OUTPUT):
+Reminder: Dear Akhila, your loan is due on 25-JUN-2025  
+Reminder: Dear Ravi, your loan is due on 30-JUN-2025  
+Reminder: Dear Sneha, your loan is due on 05-JUL-2025  
+Reminder: Dear Vikram, your loan is due on 15-JUL-2025  
+Reminder: Dear Divya, your loan is due on 22-JUL-2025  
+
+(Make sure `SET SERVEROUTPUT ON;` is enabled)
