@@ -1,0 +1,13 @@
+SQL> BEGIN
+         FOR cust IN (
+             SELECT CustomerID, DOB
+             FROM Customers...
+Show more...
+
+
+Interest rate updated for Customer ID: 3, Age: 75
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.012
