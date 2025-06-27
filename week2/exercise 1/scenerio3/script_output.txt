@@ -1,0 +1,13 @@
+SQL> DECLARE
+         v_name Customers.Name%TYPE;
+         v_due_date Loans.EndDate%TYPE;
+     BEGIN...
+Show more...
+
+
+Reminder: Loan for Grace Soon is due on 07-JUL-2025
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.018
