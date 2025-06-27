@@ -1,0 +1,51 @@
+SQL> INSERT INTO Accounts (AccountID, CustomerID, AccountType, Balance, LastModified)
+     VALUES (3, 1, 'Savings', 5000, SYSDATE)
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.002
+
+
+SQL> INSERT INTO Accounts (AccountID, CustomerID, AccountType, Balance, LastModified)
+     VALUES (4, 1, 'Checking', 2000, SYSDATE)
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.001
+
+
+SQL> COMMIT
+
+
+
+Commit complete.
+
+Elapsed: 00:00:00.001
+
+
+SQL> CREATE OR REPLACE PROCEDURE TransferFunds (
+         p_from_account_id IN NUMBER,
+         p_to_account_id IN NUMBER,
+         p_amount IN NUMBER...
+Show more...
+
+
+
+Procedure TRANSFERFUNDS compiled
+
+Elapsed: 00:00:00.018
+
+
+SQL> BEGIN
+         TransferFunds(3, 4, 1000); -- Transfer 1000 from AccountID 3 to AccountID 4
+     END;
+
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.010
