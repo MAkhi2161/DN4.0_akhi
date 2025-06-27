@@ -1,0 +1,22 @@
+SQL> CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest AS
+     BEGIN
+         -- Apply 1% interest to all savings accounts
+         UPDATE Accounts...
+Show more...
+
+
+
+Procedure PROCESSMONTHLYINTEREST compiled
+
+Elapsed: 00:00:00.005
+
+
+SQL> BEGIN
+         ProcessMonthlyInterest;
+     END;
+
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.012
