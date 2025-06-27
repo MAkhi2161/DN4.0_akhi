@@ -1,0 +1,22 @@
+SQL> CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus (
+         p_department IN VARCHAR2,
+         p_bonus_percent IN NUMBER
+     ) AS...
+Show more...
+
+
+
+Procedure UPDATEEMPLOYEEBONUS compiled
+
+Elapsed: 00:00:00.003
+
+
+SQL> BEGIN
+         UpdateEmployeeBonus('IT', 10);
+     END;
+
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.011
