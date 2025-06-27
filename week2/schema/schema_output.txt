@@ -1,0 +1,153 @@
+SQL> CREATE TABLE Customers (
+         CustomerID NUMBER PRIMARY KEY,
+         Name VARCHAR2(100),
+         DOB DATE,...
+Show more...
+
+
+
+Table CUSTOMERS created.
+
+Elapsed: 00:00:00.015
+
+
+SQL> CREATE TABLE Accounts (
+         AccountID NUMBER PRIMARY KEY,
+         CustomerID NUMBER,
+         AccountType VARCHAR2(20),...
+Show more...
+
+
+
+Table ACCOUNTS created.
+
+Elapsed: 00:00:00.015
+
+
+SQL> CREATE TABLE AccountTransactions (
+         TransactionID NUMBER PRIMARY KEY,
+         AccountID NUMBER,
+         TransactionDate DATE,...
+Show more...
+
+
+
+Table ACCOUNTTRANSACTIONS created.
+
+Elapsed: 00:00:00.013
+
+
+SQL> CREATE TABLE Loans (
+         LoanID NUMBER PRIMARY KEY,
+         CustomerID NUMBER,
+         LoanAmount NUMBER(12,2),...
+Show more...
+
+
+
+Table LOANS created.
+
+Elapsed: 00:00:00.013
+
+
+SQL> CREATE TABLE Employees (
+         EmployeeID NUMBER PRIMARY KEY,
+         Name VARCHAR2(100),
+         Position VARCHAR2(50),...
+Show more...
+
+
+
+Table EMPLOYEES created.
+
+Elapsed: 00:00:00.011
+
+
+SQL> INSERT INTO Customers (CustomerID, Name, DOB, Balance, LastModified)
+     VALUES (1, 'John Doe', TO_DATE('1985-05-15', 'YYYY-MM-DD'), 1000, SYSDATE)
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.016
+
+
+SQL> INSERT INTO Customers (CustomerID, Name, DOB, Balance, LastModified)
+     VALUES (2, 'Jane Smith', TO_DATE('1990-07-20', 'YYYY-MM-DD'), 1500, SYSDATE)
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.002
+
+
+SQL> INSERT INTO Accounts (AccountID, CustomerID, AccountType, Balance, LastModified)
+     VALUES (1, 1, 'Savings', 1000, SYSDATE)
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.013
+
+
+SQL> INSERT INTO Accounts (AccountID, CustomerID, AccountType, Balance, LastModified)
+     VALUES (2, 2, 'Checking', 1500, SYSDATE)
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.002
+
+
+SQL> INSERT INTO AccountTransactions (TransactionID, AccountID, TransactionDate, Amount, TransactionType)
+     VALUES (1, 1, SYSDATE, 200, 'Deposit')
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.012
+
+
+SQL> INSERT INTO AccountTransactions (TransactionID, AccountID, TransactionDate, Amount, TransactionType)
+     VALUES (2, 2, SYSDATE, 300, 'Withdrawal')
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.002
+
+
+SQL> INSERT INTO Loans (LoanID, CustomerID, LoanAmount, InterestRate, StartDate, EndDate)
+     VALUES (1, 1, 5000, 5, SYSDATE, ADD_MONTHS(SYSDATE, 60))
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.012
+
+
+SQL> INSERT INTO Employees (EmployeeID, Name, Position, Salary, Department, HireDate)
+     VALUES (1, 'Alice Johnson', 'Manager', 70000, 'HR', TO_DATE('2015-06-15', 'YYYY-MM-DD'))
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.012
+
+
+SQL> INSERT INTO Employees (EmployeeID, Name, Position, Salary, Department, HireDate)
+     VALUES (2, 'Bob Brown', 'Developer', 60000, 'IT', TO_DATE('2017-03-20', 'YYYY-MM-DD'))
+
+
+
+1 row inserted.
+
+Elapsed: 00:00:00.001
