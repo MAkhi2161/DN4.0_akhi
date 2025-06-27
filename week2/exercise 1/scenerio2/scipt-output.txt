@@ -1,0 +1,13 @@
+SQL> BEGIN
+         FOR cust IN (
+             SELECT CustomerID, Balance
+             FROM Customers...
+Show more...
+
+
+Promoted to VIP: Customer ID 4
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.009
