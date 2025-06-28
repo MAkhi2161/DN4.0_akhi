@@ -7,11 +7,11 @@ public class MyServiceTest {
 
     @Test
     public void testVerifyInteraction() {
-        ExternalApi mockApi = mock(ExternalApi.class);      // Step 1: Mock object
-        MyService service = new MyService(mockApi);         // Step 2: Use in service
+        ExternalApi mockApi = mock(ExternalApi.class);     
+        MyService service = new MyService(mockApi);         
 
-        service.fetchData();                                // Step 3: Call method
+        service.fetchData();                               
 
-        verify(mockApi).getData();                          // Step 4: Verify interaction
+        verify(mockApi).getData();                          
     }
 }
