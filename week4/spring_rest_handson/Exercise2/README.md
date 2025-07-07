@@ -10,7 +10,7 @@ spring-learn/
 │   │   ├── java/
 │   │   │   └── com/
 │   │   │       └── cognizant/
-│   │   │           └── spring\_learn/
+│   │   │           └── spring_learn/
 │   │   │               ├── controller/           
 │   │   │               └── SpringLearnApplication.java 
 │   │   └── resources/
