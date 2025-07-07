@@ -1,25 +1,25 @@
-package com.cognizant.springlearn;
+package com.cognizant.spring_learn;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class SpringLearnApplication {
+	private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
 
 	public static void main(String[] args) {
-		displayDate();  // call the method
+		LOGGER.info("START");
+
+		displayCountry();
+
+		LOGGER.info("END");
 	}
 
-	public static void displayDate() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("date-format.xml");
-		SimpleDateFormat format = context.getBean("dateFormat", SimpleDateFormat.class);
-
-		try {
-			Date parsedDate = format.parse("31/12/2018");
-			System.out.println("Parsed Date: " + parsedDate);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public static void displayCountry() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
+		Country country = context.getBean("country", Country.class);
+		LOGGER.debug("Country : {}", country.toString());
+		System.out.println("Country from XML: " + country);
 	}
 }
