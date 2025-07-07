@@ -1,24 +1,25 @@
-This project follows a standard Maven structure for a Spring Boot application.
-Project Structure
 
+This is a Spring Boot project structured as follows:
+Project Structure
 ```
+
 spring-learn/
 ├── .idea/                      
-├── .mvn/                       
+├── .mvn/                      
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── cognizant/
-│   │   │           └── spring_learn/
-│   │   │               ├── controller/           
-│   │   │               └── SpringLearnApplication.java 
-│   │   └── resources/
-│   │       ├── static/                          
-│   │       ├── templates/                       
-│   │       ├── application.properties           
-│   │       └── date-format.xml                  
-│
-└── test/                                        
-```
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── cognizant/
+│       │           └── spring\_learn/
+│       │               ├── SpringLearnApplication.java   
+│       │               └── controller/
+│       │                   └── Country.java             
+│       └── resources/
+│           ├── static/                                   
+│           ├── templates/                               
+│           ├── application.properties                    
+│           └── country.xml                               
+└── test/                                                
 
+```
