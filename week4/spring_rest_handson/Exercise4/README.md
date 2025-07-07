@@ -1,6 +1,6 @@
 A Spring Boot project demonstrating basic REST API concepts and XML-based bean configuration using a Country model.
-Project Structure
 
+Project Structure
 ```
 spring-learn/
 ├── .idea/                         
