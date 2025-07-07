@@ -1,8 +1,5 @@
-
 A basic Spring Boot project demonstrating a simple controller setup.
-
  Project Structure
-
 ```
 
 spring-learn/
