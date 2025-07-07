@@ -11,7 +11,7 @@ spring-learn/
 │       ├── java/
 │       │   └── com/
 │       │       └── cognizant/
-│       │           └── spring\_learn/
+│       │           └── spring_learn/
 │       │               ├── SpringLearnApplication.java   
 │       │               └── controller/
 │       │                   └── Country.java             
